@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-
+//clase que representa un animal
 public class Animal
 {
     public string Nombre { get; set; }
@@ -14,14 +14,14 @@ public class Animal
         Edad = edad;
         Especie = especie;
     }
-
+   //metodo virtual
     public virtual void EmitirSonido()
     {
         Console.WriteLine($"{Nombre} hace un sonido genérico.");
     }
 }
 
-
+//mamifero que hereda la clase animal
 public class Mamifero : Animal
 {
     public Mamifero(string nombre, int edad, string especie)
@@ -38,7 +38,7 @@ public class Mamifero : Animal
     }
 }
 
-
+//ave que hereda de la clase animal
 public class Ave : Animal
 {
     public Ave(string nombre, int edad, string especie)
@@ -55,7 +55,7 @@ public class Ave : Animal
     }
 }
 
-
+// reptil que hereda de la clase animal
 public class Reptil : Animal
 {
     public Reptil(string nombre, int edad, string especie)
@@ -72,7 +72,7 @@ public class Reptil : Animal
     }
 }
 
-
+//clase que contiene la lista de animales
 public class Zoologico
 {
     private List<Animal> animales = new List<Animal>();
@@ -82,7 +82,7 @@ public class Zoologico
         animales.Add(animal);
         Console.WriteLine($" Se agregó {animal.Nombre} al zoológico.");
     }
-
+//muestra comportamiento de los animales
     public void MostrarAnimales()
     {
         Console.WriteLine("\n Animales en el zoológico:\n");
